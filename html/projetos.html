@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projetos - Mãos que Ajudam</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO E NAVEGAÇÃO
+    ========================== -->
+
+    <header>
+        <h1>Projetos - Mãos que Ajudam</h1>
+
+        <p>
+            Conheça nossas iniciativas e descubra como participar.
+        </p>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="container">
+
+        <div class="row">
+
+            <!-- APRESENTAÇÃO -->
+
+            <section class="col-6">
+                <h2>Apresentação dos projetos sociais</h2>
+
+                <p>
+                    A Mãos que Ajudam desenvolve projetos sociais para apoiar
+                    pessoas e comunidades que precisam de ajuda.
+                </p>
+            </section>
+
+
+            <!-- CAMPANHAS DINÂMICAS -->
+
+            <section class="col-6">
+                <h2>Campanhas de doação</h2>
+
+                <div id="lista-projetos"></div>
+            </section>
+
+
+            <!-- VOLUNTARIADO -->
+
+            <section class="col-6">
+                <h2>Seja voluntário</h2>
+
+                <p>
+                    Os voluntários podem participar das ações sociais e ajudar
+                    na organização e distribuição das doações.
+                </p>
+            </section>
+
+
+            <!-- COMO PARTICIPAR -->
+
+            <section class="col-6">
+                <h2>Como participar</h2>
+
+                <p>
+                    Para participar, acesse a página de cadastro e preencha
+                    seus dados para fazer parte das nossas ações.
+                </p>
+
+                <a href="cadastro.html">Quero participar</a>
+            </section>
+
+        </div>
+
+
+        <!-- =========================
+             BOTÕES DE INTERAÇÃO
+        ========================== -->
+
+        <button type="button" id="botao-toast">
+            Mostrar notificação
+        </button>
+
+        <button type="button" id="botao-modal">
+            Saiba mais
+        </button>
+
+
+        <!-- =========================
+             NOTIFICAÇÃO TOAST
+        ========================== -->
+
+        <div id="toast" class="toast">
+            Ação realizada com sucesso!
+        </div>
+
+
+        <!-- =========================
+             MODAL
+        ========================== -->
+
+        <div id="modal" class="modal">
+
+            <div class="modal-conteudo">
+
+                <h2>Participe da Mãos que Ajudam</h2>
+
+                <p>
+                    Você pode participar como voluntário ou contribuir
+                    com nossas campanhas de doação.
+                </p>
+
+                <button
+                    type="button"
+                    id="botao-fechar-modal"
+                >
+                    Fechar
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+        <p>&copy; 2026 Mãos que Ajudam</p>
+    </footer>
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+    <!-- JavaScript principal carregado como módulo ES6 -->
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+
+</html>

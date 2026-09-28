@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mãos que Ajudam</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO E NAVEGAÇÃO
+    ========================== -->
+
+    <header>
+        <h1>Mãos que Ajudam</h1>
+
+        <p>
+            Transformando vidas através da solidariedade.
+        </p>
+
+        <!-- Botão utilizado no menu responsivo -->
+        <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <nav class="menu">
+            <a
+                href="index.html"
+                onclick="carregarPagina('index.html'); return false;"
+            >
+                Início
+            </a>
+
+            <a
+                href="projetos.html"
+                onclick="carregarPagina('projetos.html'); return false;"
+            >
+                Projetos
+            </a>
+
+            <a
+                href="cadastro.html"
+                onclick="carregarPagina('cadastro.html'); return false;"
+            >
+                Cadastro
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL DA SPA
+    ========================== -->
+
+    <main id="conteudo">
+
+        <!-- SOBRE A ONG -->
+
+        <section>
+            <h2>Sobre a ONG</h2>
+
+            <p>
+                A Mãos que Ajudam desenvolve ações sociais para apoiar
+                pessoas e comunidades que precisam de ajuda.
+            </p>
+
+            <img
+                src="../imagens/voluntarios.png"
+                alt="Voluntários entregando alimentos durante uma ação social"
+                width="600"
+            >
+        </section>
+
+
+        <!-- CONTATO -->
+
+        <section>
+            <h2>Contato</h2>
+
+            <p>E-mail: contato@maosqueajudam.org</p>
+            <p>Telefone: (11) 99999-9999</p>
+            <p>Endereço: São Paulo - SP</p>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+        <p>&copy; 2026 Mãos que Ajudam</p>
+    </footer>
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+    <!-- Controle do menu responsivo -->
+    <script>
+        const botaoMenu = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        botaoMenu.addEventListener("click", function() {
+            menu.classList.toggle("ativo");
+        });
+    </script>
+
+
+    <!-- Biblioteca externa SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- JavaScript principal do projeto -->
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+
+</html>
