@@ -387,3 +387,13 @@ footer {
     width: 190px;
     box-sizing: border-box;
 }
+
+/* =========================
+   ACESSIBILIDADE - FOCO
+========================= */
+
+a:focus,
+button:focus {
+    outline: 2px solid #000;
+    outline-offset: 3px;
+}
