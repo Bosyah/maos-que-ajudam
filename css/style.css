@@ -518,3 +518,12 @@ body.alto-contraste .botao-contraste {
 body.alto-contraste .botao-contraste:focus-visible {
     outline-color: #ffff00;
 }
+
+/* =========================
+   OTIMIZAÇÃO DE IMAGENS
+========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
