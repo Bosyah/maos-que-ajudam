@@ -24,14 +24,22 @@
         <!-- Botão utilizado no menu responsivo -->
         <button
             class="menu-toggle"
-            aria-label="Abrir menu"
+            type="button"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="menu-principal"
         >
             ☰
         </button>
 
-        <nav class="menu">
+        <nav
+            id="menu-principal"
+            class="menu"
+            aria-label="Navegação principal"
+        >
             <a
                 href="index.html"
+                aria-current="page"
                 onclick="carregarPagina('index.html'); return false;"
             >
                 Início
@@ -62,8 +70,8 @@
 
         <!-- SOBRE A ONG -->
 
-        <section>
-            <h2>Sobre a ONG</h2>
+        <section aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">Sobre a ONG</h2>
 
             <p>
                 A Mãos que Ajudam desenvolve ações sociais para apoiar
@@ -80,8 +88,8 @@
 
         <!-- CONTATO -->
 
-        <section>
-            <h2>Contato</h2>
+        <section aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato">Contato</h2>
 
             <p>E-mail: contato@maosqueajudam.org</p>
             <p>Telefone: (11) 99999-9999</p>
@@ -111,6 +119,20 @@
 
         botaoMenu.addEventListener("click", function() {
             menu.classList.toggle("ativo");
+
+            const menuAberto = menu.classList.contains("ativo");
+
+            botaoMenu.setAttribute(
+                "aria-expanded",
+                menuAberto
+            );
+
+            botaoMenu.setAttribute(
+                "aria-label",
+                menuAberto
+                    ? "Fechar menu de navegação"
+                    : "Abrir menu de navegação"
+            );
         });
     </script>
 

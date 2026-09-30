@@ -21,9 +21,16 @@
             Conheça nossas iniciativas e descubra como participar.
         </p>
 
-        <nav>
+        <nav aria-label="Navegação principal">
             <a href="index.html">Início</a>
-            <a href="projetos.html">Projetos</a>
+
+            <a
+                href="projetos.html"
+                aria-current="page"
+            >
+                Projetos
+            </a>
+
             <a href="cadastro.html">Cadastro</a>
         </nav>
     </header>
@@ -39,8 +46,13 @@
 
             <!-- APRESENTAÇÃO -->
 
-            <section class="col-6">
-                <h2>Apresentação dos projetos sociais</h2>
+            <section
+                class="col-6"
+                aria-labelledby="titulo-apresentacao"
+            >
+                <h2 id="titulo-apresentacao">
+                    Apresentação dos projetos sociais
+                </h2>
 
                 <p>
                     A Mãos que Ajudam desenvolve projetos sociais para apoiar
@@ -51,8 +63,13 @@
 
             <!-- CAMPANHAS DINÂMICAS -->
 
-            <section class="col-6">
-                <h2>Campanhas de doação</h2>
+            <section
+                class="col-6"
+                aria-labelledby="titulo-campanhas"
+            >
+                <h2 id="titulo-campanhas">
+                    Campanhas de doação
+                </h2>
 
                 <div id="lista-projetos"></div>
             </section>
@@ -60,8 +77,13 @@
 
             <!-- VOLUNTARIADO -->
 
-            <section class="col-6">
-                <h2>Seja voluntário</h2>
+            <section
+                class="col-6"
+                aria-labelledby="titulo-voluntariado"
+            >
+                <h2 id="titulo-voluntariado">
+                    Seja voluntário
+                </h2>
 
                 <p>
                     Os voluntários podem participar das ações sociais e ajudar
@@ -72,15 +94,22 @@
 
             <!-- COMO PARTICIPAR -->
 
-            <section class="col-6">
-                <h2>Como participar</h2>
+            <section
+                class="col-6"
+                aria-labelledby="titulo-participar"
+            >
+                <h2 id="titulo-participar">
+                    Como participar
+                </h2>
 
                 <p>
                     Para participar, acesse a página de cadastro e preencha
                     seus dados para fazer parte das nossas ações.
                 </p>
 
-                <a href="cadastro.html">Quero participar</a>
+                <a href="cadastro.html">
+                    Quero participar
+                </a>
             </section>
 
         </div>
@@ -90,11 +119,20 @@
              BOTÕES DE INTERAÇÃO
         ========================== -->
 
-        <button type="button" id="botao-toast">
+        <button
+            type="button"
+            id="botao-toast"
+            aria-describedby="toast"
+        >
             Mostrar notificação
         </button>
 
-        <button type="button" id="botao-modal">
+        <button
+            type="button"
+            id="botao-modal"
+            aria-haspopup="dialog"
+            aria-controls="modal"
+        >
             Saiba mais
         </button>
 
@@ -103,7 +141,13 @@
              NOTIFICAÇÃO TOAST
         ========================== -->
 
-        <div id="toast" class="toast">
+        <div
+            id="toast"
+            class="toast"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+        >
             Ação realizada com sucesso!
         </div>
 
@@ -112,13 +156,23 @@
              MODAL
         ========================== -->
 
-        <div id="modal" class="modal">
+        <div
+            id="modal"
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-modal"
+            aria-describedby="descricao-modal"
+            aria-hidden="true"
+        >
 
             <div class="modal-conteudo">
 
-                <h2>Participe da Mãos que Ajudam</h2>
+                <h2 id="titulo-modal">
+                    Participe da Mãos que Ajudam
+                </h2>
 
-                <p>
+                <p id="descricao-modal">
                     Você pode participar como voluntário ou contribuir
                     com nossas campanhas de doação.
                 </p>
