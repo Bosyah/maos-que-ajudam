@@ -70,6 +70,94 @@ window.addEventListener("popstate", function() {
 
 
 /* =========================
+   ALTO CONTRASTE
+========================= */
+
+const botaoContraste =
+    document.getElementById("botao-contraste");
+
+
+/* Carrega a preferência salva anteriormente */
+function carregarPreferenciaContraste() {
+
+    const contrasteSalvo =
+        localStorage.getItem("altoContraste");
+
+    if (contrasteSalvo === "ativo") {
+        document.body.classList.add("alto-contraste");
+    } else {
+        document.body.classList.remove("alto-contraste");
+    }
+
+    atualizarBotaoContraste();
+}
+
+
+/* Atualiza ícone e atributos de acessibilidade */
+function atualizarBotaoContraste() {
+
+    if (!botaoContraste) {
+        return;
+    }
+
+    const contrasteAtivo =
+        document.body.classList.contains("alto-contraste");
+
+    botaoContraste.textContent =
+        contrasteAtivo ? "☀️" : "🌙";
+
+    botaoContraste.setAttribute(
+        "aria-pressed",
+        contrasteAtivo
+    );
+
+    botaoContraste.setAttribute(
+        "aria-label",
+        contrasteAtivo
+            ? "Desativar alto contraste"
+            : "Ativar alto contraste"
+    );
+
+    botaoContraste.setAttribute(
+        "title",
+        contrasteAtivo
+            ? "Desativar alto contraste"
+            : "Ativar alto contraste"
+    );
+}
+
+
+/* Ativa ou desativa o alto contraste */
+if (botaoContraste) {
+
+    botaoContraste.addEventListener("click", function() {
+
+        document.body.classList.toggle("alto-contraste");
+
+        const contrasteAtivo =
+            document.body.classList.contains("alto-contraste");
+
+        if (contrasteAtivo) {
+
+            localStorage.setItem(
+                "altoContraste",
+                "ativo"
+            );
+
+        } else {
+
+            localStorage.setItem(
+                "altoContraste",
+                "inativo"
+            );
+        }
+
+        atualizarBotaoContraste();
+    });
+}
+
+
+/* =========================
    INICIALIZAÇÃO DA PÁGINA
 ========================= */
 
@@ -100,4 +188,5 @@ window.carregarPagina = carregarPagina;
    INICIALIZAÇÃO
 ========================= */
 
+carregarPreferenciaContraste();
 iniciarPagina();

@@ -59,6 +59,19 @@
                 Cadastro
             </a>
         </nav>
+
+        <!-- Botão para ativar/desativar o alto contraste -->
+        <button
+            id="botao-contraste"
+            class="botao-contraste"
+            type="button"
+            aria-pressed="false"
+            aria-label="Ativar alto contraste"
+            title="Ativar alto contraste"
+        >
+            🌙
+        </button>
+
     </header>
 
 
@@ -112,15 +125,21 @@
          SCRIPTS
     ========================== -->
 
-    <!-- Controle do menu responsivo -->
     <script>
+
+        /* =========================
+           MENU RESPONSIVO
+        ========================== */
+
         const botaoMenu = document.querySelector(".menu-toggle");
         const menu = document.querySelector(".menu");
 
         botaoMenu.addEventListener("click", function() {
+
             menu.classList.toggle("ativo");
 
-            const menuAberto = menu.classList.contains("ativo");
+            const menuAberto =
+                menu.classList.contains("ativo");
 
             botaoMenu.setAttribute(
                 "aria-expanded",
@@ -134,6 +153,7 @@
                     : "Abrir menu de navegação"
             );
         });
+
     </script>
 
 

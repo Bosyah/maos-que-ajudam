@@ -389,11 +389,132 @@ footer {
 }
 
 /* =========================
-   ACESSIBILIDADE - FOCO
+   ACESSIBILIDADE
 ========================= */
 
-a:focus,
-button:focus {
-    outline: 2px solid #000;
+/* Foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #000000;
     outline-offset: 3px;
+}
+
+/* Facilita a identificação visual dos links */
+a {
+    text-underline-offset: 3px;
+}
+
+/* =========================
+   MODO DE ALTO CONTRASTE
+========================= */
+
+body.alto-contraste {
+    --cor-primaria: #000000;
+    --cor-secundaria: #000000;
+    --cor-destaque: #ffff00;
+    --cor-sucesso: #006400;
+
+    --cor-fundo: #ffffff;
+    --cor-branco: #ffffff;
+    --cor-texto: #000000;
+    --cor-texto-claro: #000000;
+}
+
+/* Cabeçalho e rodapé */
+body.alto-contraste header,
+body.alto-contraste footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Links */
+body.alto-contraste a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Links da navegação, cabeçalho e rodapé */
+body.alto-contraste header a,
+body.alto-contraste footer a,
+body.alto-contraste nav a {
+    color: #ffffff;
+}
+
+/* Botões */
+body.alto-contraste button,
+body.alto-contraste input[type="submit"] {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* Campos de formulário */
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste textarea {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+/* Foco destacado no modo de alto contraste */
+body.alto-contraste a:focus-visible,
+body.alto-contraste button:focus-visible,
+body.alto-contraste input:focus-visible,
+body.alto-contraste select:focus-visible,
+body.alto-contraste textarea:focus-visible {
+    outline: 3px solid #ffff00;
+    outline-offset: 3px;
+}
+
+/* ==============================
+   BOTÃO DE ALTO CONTRASTE
+============================== */
+
+header {
+    position: relative;
+}
+
+.botao-contraste {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    background-color: transparent;
+    color: #ffffff;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-contraste:hover {
+    transform: scale(1.08);
+}
+
+.botao-contraste:focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+}
+
+body.alto-contraste .botao-contraste {
+    background-color: #000000;
+    border-color: #ffff00;
+}
+
+body.alto-contraste .botao-contraste:focus-visible {
+    outline-color: #ffff00;
 }
